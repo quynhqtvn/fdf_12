@@ -5,6 +5,6 @@ class EventsController < ApplicationController
   end
 
   def update
-    Event.unread.update_all read: true
+    current_user.events.unread.update_all read: true
   end
 end
